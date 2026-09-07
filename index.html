@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peta Masuknya Bangsa Portugis ke Indonesia</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#beranda" class="logo">
+            ⚓ Sejarah Nusantara
+        </a>
+
+        <button id="menuToggle" class="menu-toggle">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="#beranda">Beranda</a>
+            <a href="#peta">Peta</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#latar">Latar Belakang</a>
+            <a href="#tokoh">Tokoh</a>
+            <a href="#dampak">Dampak</a>
+            <a href="#kesimpulan">Kesimpulan</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section id="beranda" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            SEJARAH INDONESIA
+        </p>
+
+        <h1>
+            PETA MASUKNYA BANGSA
+            <span>PORTUGIS KE INDONESIA</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Perjalanan Portugis mencari jalur rempah-rempah
+            hingga mencapai Maluku
+        </p>
+
+        <button id="heroJourneyBtn" class="primary-btn">
+            🧭 Lihat Jalur Perjalanan
+        </button>
+
+    </div>
+
+    <div class="hero-icon">
+        🗺️
+    </div>
+
+</section>
+
+
+<!-- ================= PETA ================= -->
+
+<section id="peta" class="section fade-in">
+
+    <div class="section-heading">
+
+        <div class="section-icon">
+            🧭
+        </div>
+
+        <div>
+            <p class="eyebrow">
+                JALUR PELAYARAN
+            </p>
+
+            <h2>
+                Jalur Pelayaran Portugis
+            </h2>
+        </div>
+
+    </div>
+
+    <p class="description">
+        Jalur perjalanan Portugis dari Eropa menuju Asia
+        hingga mencapai Maluku dan Ternate.
+        Klik marker atau garis merah untuk melihat keterangan.
+    </p>
+
+
+    <div class="map-card">
+
+        <div id="map-container"></div>
+
+        <div class="map-caption">
+            ⛵ Portugal → Goa → Malaka → Maluku → Ternate
+        </div>
+
+    </div>
+
+
+    <button id="journeyBtn" class="primary-btn journey-btn">
+        ⛵ Jalankan Perjalanan
+    </button>
+
+</section>
+
+
+<!-- ================= TIMELINE ================= -->
+
+<section id="timeline" class="section fade-in">
+
+    <div class="section-heading">
+
+        <div class="section-icon">
+            📜
+        </div>
+
+        <div>
+            <p class="eyebrow">
+                PERJALANAN WAKTU
+            </p>
+
+            <h2>
+                Timeline
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                1498
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>
+                    Vasco da Gama Mencapai India
+                </h3>
+
+                <p>
+                    Vasco da Gama berhasil mencapai India
+                    melalui jalur laut dari Eropa.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                1511
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>
+                    Portugis Menguasai Malaka
+                </h3>
+
+                <p>
+                    Portugis berhasil menguasai Malaka
+                    pada tahun 1511 di bawah pimpinan
+                    Afonso de Albuquerque.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                1512
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>
+                    Portugis Mencapai Maluku
+                </h3>
+
+                <p>
+                    Ekspedisi António de Abreu dan
+                    Francisco Serrão mencapai Maluku
+                    pada tahun 1512.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                1512+
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>
+                    Hubungan dengan Kerajaan Lokal
+                </h3>
+
+                <p>
+                    Portugis kemudian menjalin hubungan
+                    perdagangan dan politik dengan
+                    kerajaan-kerajaan di Maluku.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LATAR BELAKANG ================= -->
+
+<section id="latar" class="section alt-section fade-in">
+
+    <div class="section-heading">
+
+        <div class="section-icon">
+            🌊
+        </div>
+
+        <div>
+
+            <p class="eyebrow">
+                AWAL PERJALANAN
+            </p>
+
+            <h2>
+                Latar Belakang
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🧭
+            </div>
+
+            <h3>
+                Mencari Jalur Baru
+            </h3>
+
+            <p>
+                Bangsa Portugis melakukan pelayaran
+                untuk mencari jalur perdagangan baru
+                menuju Asia.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🌿
+            </div>
+
+            <h3>
+                Mencari Rempah-rempah
+            </h3>
+
+            <p>
+                Rempah-rempah seperti cengkih dan pala
+                menjadi komoditas penting yang menarik
+                bangsa Eropa.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🚢
+            </div>
+
+            <h3>
+                Mencapai Asia
+            </h3>
+
+            <p>
+                Portugis terus memperluas pelayarannya
+                hingga mencapai Asia Tenggara dan
+                wilayah Maluku.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOKOH ================= -->
+
+<section id="tokoh" class="section fade-in">
+
+    <div class="section-heading">
+
+        <div class="section-icon">
+            👤
+        </div>
+
+        <div>
+
+            <p class="eyebrow">
+                TOKOH PENTING
+            </p>
+
+            <h2>
+                Tokoh Pelayaran Portugis
+            </h2>
+
+        </div>
+
+    </div>
+<div class="people-grid">
+
+    <div class="person-card">
+
+        <div class="person-photo">
+            <img src="afonso.jpg" alt="Afonso de Albuquerque">
+        </div>
+
+        <h3>Afonso de Albuquerque</h3>
+
+        <p>
+            Pemimpin Portugis yang berhasil menguasai
+            Malaka pada tahun 1511.
+        </p>
+
+    </div>
+
+
+    <div class="person-card">
+
+        <div class="person-photo">
+            <img src="antonio.jpg" alt="António de Abreu">
+        </div>
+
+        <h3>António de Abreu</h3>
+
+        <p>
+            Salah satu pemimpin ekspedisi Portugis
+            yang mencapai Maluku pada tahun 1512.
+        </p>
+
+    </div>
+
+
+    <div class="person-card">
+
+        <div class="person-photo">
+            <img src="serrao.jpg" alt="Francisco Serrão">
+        </div>
+
+        <h3>Francisco Serrão</h3>
+
+        <p>
+            Pelaut Portugis yang mencapai Maluku
+            dan kemudian memiliki hubungan dengan
+            Kesultanan Ternate.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DAMPAK ================= -->
+
+<section id="dampak" class="section alt-section fade-in">
+
+    <div class="section-heading">
+
+        <div class="section-icon">
+            ⚓
+        </div>
+
+        <div>
+
+            <p class="eyebrow">
+                PENGARUH
+            </p>
+
+            <h2>
+                Dampak Kedatangan Portugis
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+
+            <div class="impact-icon">
+                🌿
+            </div>
+
+            <h3>
+                Perdagangan
+            </h3>
+
+            <p>
+                Portugis berusaha menguasai perdagangan
+                rempah-rempah, terutama cengkih dan pala.
+            </p>
+
+        </div>
+
+
+        <div class="impact-card">
+
+            <div class="impact-icon">
+                🤝
+            </div>
+
+            <h3>
+                Hubungan dengan Kerajaan Lokal
+            </h3>
+
+            <p>
+                Portugis menjalin hubungan perdagangan
+                dan politik dengan kerajaan-kerajaan
+                di Maluku.
+            </p>
+
+        </div>
+
+
+        <div class="impact-card">
+
+            <div class="impact-icon">
+                ⚔️
+            </div>
+
+            <h3>
+                Persaingan
+            </h3>
+
+            <p>
+                Kehadiran Portugis menimbulkan persaingan
+                untuk menguasai perdagangan dan wilayah
+                strategis.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KESIMPULAN ================= -->
+
+<section id="kesimpulan" class="section fade-in">
+
+    <div class="conclusion-box">
+
+        <div class="section-heading">
+
+            <div class="section-icon">
+                📖
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    PENUTUP
+                </p>
+
+                <h2>
+                    Kesimpulan
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Masuknya Portugis ke Indonesia merupakan bagian dari
+            pelayaran bangsa Eropa untuk mencari jalur perdagangan
+            dan sumber rempah-rempah. Setelah menguasai Malaka pada
+            1511, Portugis mencapai Maluku pada 1512 dan kemudian
+            membangun hubungan perdagangan serta politik dengan
+            kerajaan-kerajaan setempat.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                Website Edukasi Sejarah
+            </h3>
+
+            <p>
+                Peta Masuknya Bangsa Portugis ke Indonesia
+            </p>
+
+        </div>
+
+
+        <p>
+            Dibuat untuk tugas sejarah sekolah.
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        © 2026 — Peta Masuknya Bangsa Portugis ke Indonesia
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backTop" class="back-top">
+    ↑
+</button>
+
+
+<!-- Leaflet -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="set.js"></script>
+
+</body>
+</html>
